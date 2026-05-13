@@ -1,26 +1,46 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Event Listener Example</title>
-        <style>
-            #myImage{
-                width : "3px";
-                height : "3px" solid transparent;
-            }
-            </style>
-        </head>
-        <body>
-            <button id = "myButton">ClickMe</button>
-            <br><br>
-            image id = "myImage" src = "https://www.w3schools.com/images/w3schools_green.jpg"
-            <script>
-                document.getElementById("myButton").addEventListener
-                ("click", function (){
-                    console.log("Button clicked!"
-                });
 
-                
+<head>
+    <title>Event Listener Example</title>
 
-            </script> 
-        </body>
+    <style>
+        #myImage {
+            width: 200px;
+            border: 3px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="myButton">Click Me</button>
+
+    <br><br>
+
+    <img id="myImage"
+        src="https://thumbs.dreamstime.com/b/young-conceptual-image-large-stone-shape-human-brain-conceptual-image-large-stone-shape-110748113.jpg">
+
+    <script>
+
+        document.getElementById("myButton").addEventListener("click", function () {
+            console.log("Button clicked!");
+        });
+
+        document.getElementById("myImage").addEventListener("mouseover", function () {
+            this.style.border = "3px solid red";
+        });
+
+        document.getElementById("myImage").addEventListener("mouseout", function () {
+            this.style.border = "3px solid transparent";
+        });
+
+        document.addEventListener("keydown", function (event) {
+            console.log("Key Pressed:", event.key);
+        });
+
+    </script>
+
+</body>
+
 </html>
