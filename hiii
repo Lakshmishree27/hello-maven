@@ -1,0 +1,59 @@
+curl -L -o C:\Users\Admin\Downloads\jenkins.msi https://get.jenkins.io/windows-stable/latest/jenkins.msi
+C:\ProgramData\Jenkins\.jenkins
+  net stop jenkins
+C:\ProgramData\Jenkins\.jenkins
+  C:\ProgramData\Jenkins\.jenkins
+  rmdir /s /q "C:\ProgramData\Jenkins\.jenkins"
+  net start jenkins
+http://localhost:8080
+type "C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword"
+  services.msc
+
+
+
+
+  Step 1: Check the Jenkins service
+
+Open Command Prompt as Administrator and run:
+
+sc query jenkins
+
+Send me the output.
+
+Step 2: Check if Jenkins is listening on port 8080
+
+Run:
+
+netstat -ano | findstr :8080
+
+If Jenkins is running, you'll see a line containing :8080.
+
+Step 3: Try opening Jenkins
+
+Open your browser and go to:
+
+http://localhost:8080
+
+Tell me what happens:
+
+Jenkins login page appears
+Unlock Jenkins page appears
+Page cannot be reached
+Any error message
+Step 4: Check installation folder
+
+Run:
+
+dir "C:\Program Files\Jenkins"
+
+or check manually whether this folder exists:
+
+C:\Program Files\Jenkins
+
+Send me the outputs of:
+
+sc query jenkins
+
+and
+
+netstat -ano | findstr :8080
